@@ -7,24 +7,19 @@ using System.Threading.Tasks;
 namespace LanguagePatternsTest.Perfomance;
 public class AnyVsCount
 {
-    private List<string> people;
-
-    public AnyVsCount()
+    private List<string> people = new()
     {
-        people = new List<string>()
-        {
-            "David",
-            "John",
-            "Peter",
-            "Paul",
-            "Mary",
-            "Jane",
-            "Lucy",
-            "Mark",
-            "Luke",
-            "Matthew",
-        };
-    }
+        "David",
+        "John",
+        "Peter",
+        "Paul",
+        "Mary",
+        "Jane",
+        "Lucy",
+        "Mark",
+        "Luke",
+        "Matthew",
+    };
 
     [Fact]
     public void Any()
