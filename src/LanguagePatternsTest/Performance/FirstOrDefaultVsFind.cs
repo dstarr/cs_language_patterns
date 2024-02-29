@@ -1,4 +1,4 @@
-﻿namespace LanguagePatternsTest.Perfomance;
+﻿namespace LanguagePatternsTest.Performance;
 
 public class FirstOrDefaultVsFind
 {

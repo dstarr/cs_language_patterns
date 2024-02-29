@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LanguagePatternsTest.Perfomance;
+namespace LanguagePatternsTest.Performance;
 public class AnyVsCount
 {
     private List<string> people = new()
