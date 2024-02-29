@@ -1,35 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LanguagePatternsTest.Performance;
+﻿namespace LanguagePatternsTest.Performance;
 
 public class AnyVsContains
 {
-    private readonly int[] _numbers;
+    private readonly List<int> _numbers = [];
 
     public AnyVsContains()
     {
-        _numbers = new int[100];
-        for (int i = 1; i <= 100; i++)
+        for (var i = 1; i <= 1000; i++)
         {
-            _numbers[i-1] = i;
+            _numbers.Add(i);
         }
     }
 
     [Fact]
     public void Any()
     {
-        bool any5 = _numbers.Any(n => n == 5);
-        Assert.True(any5);
+        var any50 = _numbers.Any(n => n == 50);
+        Assert.True(any50);
     }
 
     [Fact]
     public void Contains()
     {
-        bool contains5 = _numbers.Contains(5);
-        Assert.True(contains5);
+        var contains50 = _numbers.Contains(50);
+        Assert.True(contains50);
     }
 }
