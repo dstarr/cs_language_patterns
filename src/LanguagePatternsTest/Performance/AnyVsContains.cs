@@ -2,7 +2,7 @@
 
 public class AnyVsContains
 {
-    private readonly List<int> _numbers = [];
+    private readonly List<int> _numbers = new();
 
     public AnyVsContains()
     {
