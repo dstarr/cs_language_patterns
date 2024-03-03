@@ -18,10 +18,4 @@ public class SpreadOperator
         int[] singleArray = _first.Concat(_second).Concat(_third).ToArray();
         Assert.Equal(9, singleArray.Length);
     }
-
-    //[Fact]
-    public void JoinListsWithSpreadOperator()
-    {
-        //int[] singleArray = [ .._first, .._second, .._third ];
-    }
 }
