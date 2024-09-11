@@ -16,16 +16,24 @@ public class NullChecks
     }
 
     [Fact]
-    public void RedundantCheck()
+    public void PatternMatchingWithIsCheck()
     {
-        if (_person is not null && _person is Person)
+        if (_person is not null)
         {
             Assert.True(true);
         }
     }
 
+    // C# 8
     [Fact]
-    public void CheckAgainstNull()
+    public void NullableReferenceTypeCheck()
+    {
+        string? _person = null;
+        Assert.NotNull(_person);
+    }
+
+    [Fact]
+    public void ClassicCheck()
     {
         if (_person != null)
         {
@@ -34,8 +42,10 @@ public class NullChecks
     }   
 
     [Fact]
-    public void SingleCheck()
+    public void NullCoelescingOperatorCheck()
     {
+        var result = _person ?? new Person("Elle Starr");
+
         if (_person is null)
         {
             Assert.True(false);
