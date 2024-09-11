@@ -28,8 +28,11 @@ public class NullChecks
     [Fact]
     public void NullableReferenceTypeCheck()
     {
-        string? _person = null;
-        Assert.NotNull(_person);
+        Person? person1 = _person;
+        Assert.NotNull(person1);
+
+        Person? person2 = null;
+        Assert.Null(person2);
     }
 
     [Fact]
